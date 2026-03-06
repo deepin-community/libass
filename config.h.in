@@ -1,5 +1,8 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
+/* targeting a 32- or 64-bit x86 host architecture */
+#undef ARCH_X86
+
 /* ASM enabled */
 #undef CONFIG_ASM
 
@@ -32,6 +35,9 @@
 
 /* string containing info about the used source */
 #undef CONFIG_SOURCEVERSION
+
+/* found libunibreak via pkg-config */
+#undef CONFIG_UNIBREAK
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
 #undef HAVE_DLFCN_H

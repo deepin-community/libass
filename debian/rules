@@ -1,5 +1,12 @@
 #!/usr/bin/make -f
 
+include /usr/share/dpkg/architecture.mk
+
+# force nasm to build PIC objects on x86
+ifeq (,$(filter-out amd64 i386,$(DEB_HOST_ARCH_CPU)))
+confflags += --with-pic
+endif
+
 export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 
 %:
@@ -7,5 +14,6 @@ export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
+		$(confflags) \
 		--disable-directwrite \
 		--disable-coretext
