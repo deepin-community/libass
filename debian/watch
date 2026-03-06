@@ -1,2 +1,4 @@
-version=3
-https://github.com/libass/libass/releases .*/libass-(\d+.*)\.tar\.xz
+version=4
+opts=pgpsigurlmangle=s/$/.asc/,pgpmode=auto,searchmode=plain \
+  https://api.github.com/repos/libass/@PACKAGE@/releases \
+  https://github.com/libass/@PACKAGE@/releases/download/(?:\d[\d.]*)/@PACKAGE@@ANY_VERSION@@ARCHIVE_EXT@

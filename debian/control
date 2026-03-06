@@ -6,12 +6,12 @@ Uploaders:
  Sebastian Ramacher <sramacher@debian.org>
 Build-Depends:
  debhelper-compat (= 13),
- libfontconfig1-dev,
+ libfontconfig-dev,
  libfreetype-dev,
  libfribidi-dev,
  libharfbuzz-dev,
- nasm [any-amd64]
-Standards-Version: 4.6.0
+ nasm [any-amd64 any-i386]
+Standards-Version: 4.6.1
 Section: libs
 Homepage: https://github.com/libass/libass
 Vcs-Git: https://salsa.debian.org/multimedia-team/libass.git
@@ -24,7 +24,7 @@ Architecture: any
 Multi-Arch: same
 Depends:
  libass9 (= ${binary:Version}),
- libfontconfig1-dev,
+ libfontconfig-dev,
  libfreetype-dev,
  libfribidi-dev,
  libharfbuzz-dev,
