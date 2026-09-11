@@ -1,3 +1,12 @@
+libass (1:0.17.1-1deepin1) unstable; urgency=medium
+
+  * fix(cve): CVE-2026-61627 (unknown) - [PATCH]
+    render/wrap_lines_measure: fix oob read and write   Upstream:
+    https://github.com/libass/libass/commit/f2ef59755292bc4bb950ef22710e
+    18a5487c399d
+
+ -- deepin-ci-robot <packages@deepin.org>  Sat, 12 Sep 2026 06:07:25 +0800
+
 libass (1:0.17.1-1) unstable; urgency=medium
 
   * New upstream version 0.17.1 (Closes: #1032076)
